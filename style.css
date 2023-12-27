@@ -1,0 +1,115 @@
+:root {
+    --primary: #29292c;
+    --secondary: #2f2f34;
+    --tertiary: #353537;
+
+    /*Golden Scale for Typography*/
+    --muted-text-size: 16px;
+    --muted-text-line-height: 27px;
+
+    --paragraph-text-size: 20px;
+    --paragraph-text-line-height: 33px;
+
+    --medium-text-size: 26px;
+    --medium-text-line-height: 41px;
+
+    --large-text-size: 33px;
+    --large-text-line-height: 51px;
+
+    --extra-large-text-size: 42px;
+    --extra-large-text-line-height: 64px;
+
+    --content-width: 544px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    color: white;
+    background-color: var(--primary);
+    font-family: sans-serif;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+    font-size: var(--extra-large-text-size);
+    line-height: var(--extra-large-text-line-height);
+}
+
+h2 {
+    font-size: var(--large-text-size);
+    line-height: var(--large-text-line-height);
+}
+
+h3 {
+    font-size: var(--medium-text-size);
+    line-height: var(--medium-text-line-height);
+}
+
+p, li {
+    font-size: var(--paragraph-text-size);
+    line-height: var(--paragraph-text-line-height);
+}
+
+span.muted {
+    font-size: var(--muted-text-size);
+    line-height: var(--muted-text-line-height);
+    color: var(--secondary);
+}
+
+.bold {
+    font-weight: 600;
+}
+
+#discord-username {
+    color: #666669;
+}
+
+/* HEADERS AND FOOTERS */
+
+div.header {
+    padding: 20px;
+    background-color: var(--secondary);
+}
+
+img#profile-picture {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25em;
+    width: 226px;
+    height: 226px;
+    float: left;
+    border: 20px solid var(--tertiary);
+    margin-right: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    max-width: 40%;
+    margin-right: 40px;
+    padding: 10px;
+}
+
+.column:not(:last-child) {
+    border-right: 4px solid #2277aa;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
