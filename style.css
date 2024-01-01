@@ -54,7 +54,8 @@ h3 {
     line-height: var(--medium-text-line-height);
 }
 
-p, li {
+p,
+li {
     font-size: var(--paragraph-text-size);
     line-height: var(--paragraph-text-line-height);
 }
@@ -62,7 +63,11 @@ p, li {
 span.muted {
     font-size: var(--muted-text-size);
     line-height: var(--muted-text-line-height);
-    color: var(--secondary);
+    color: #999999;
+}
+
+a {
+    color: #1b88cc;
 }
 
 .bold {
@@ -112,4 +117,65 @@ section {
     content: "";
     display: table;
     clear: both;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 1100px) {
+    .column {
+        width: 100% !important;
+        max-width: 90%;
+    }
+
+
+    .column:not(:last-child) {
+        border-right: none !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    :root {
+        --paragraph-text-size: 19px;
+        --paragraph-text-line-height: 30px;
+
+        --medium-text-size: 20px;
+        --medium-text-line-height: 41px;
+
+        --large-text-size: 24px;
+        --large-text-line-height: 51px;
+
+        --extra-large-text-size: 32px;
+        --extra-large-text-line-height: 54px;
+    }
+
+    img#profile-picture {
+        border-radius: 25em;
+        width: 162px;
+        height: 162px;
+        float: left;
+        border: 10px solid var(--tertiary);
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    :root {
+        --paragraph-text-size: 16px;
+    }
+
+    #username-title {
+        font-size: 20px!important;
+    }
+
+    #discord-username {
+        display: none;
+    }
+
+    img#profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header {
+        padding: 6px!important;
+    }
 }
